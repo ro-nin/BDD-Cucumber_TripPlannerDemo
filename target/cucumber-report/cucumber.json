@@ -1,0 +1,1123 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 2,
+        "name": "Available transports",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 2803600,
+              "status": "passed"
+            },
+            "line": 3,
+            "name": "the following public transport routes available:",
+            "match": {
+              "location": "StepDefs.the_following_public_transport_routes_available(String\u003e\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Type",
+                  "Line Name",
+                  "Departure name",
+                  "Destination name"
+                ]
+              },
+              {
+                "cells": [
+                  "Bus",
+                  "140",
+                  "Piazza Sannazzaro",
+                  "Piazza Vittoria"
+                ]
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 120100,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the following bike rental stations:",
+            "match": {
+              "location": "StepDefs.the_following_bike_rental_stations(String\u003e\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Bike Rental Station Name",
+                  "Fee per hour"
+                ]
+              },
+              {
+                "cells": [
+                  "Piedigrotta Bikes",
+                  "2"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 72400,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "there are these parking spots:",
+            "match": {
+              "location": "StepDefs.there_are_these_parking_spots(String\u003e\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Parking Spot Name",
+                  "Fee per hour"
+                ]
+              },
+              {
+                "cells": [
+                  "Parcheggio Morelli",
+                  "2"
+                ]
+              },
+              {
+                "cells": [
+                  "Piedigrotta Parking",
+                  "5"
+                ]
+              }
+            ],
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 14,
+        "name": "Fastest Multimodal Itinerary with only bike rental permitted",
+        "description": "",
+        "id": "find-the-best-multimodal-itinerary-while-travelling-on-a-car;fastest-multimodal-itinerary-with-only-bike-rental-permitted",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 19900,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I am travelling on car",
+            "match": {
+              "location": "StepDefs.i_am_travelling_on_car()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 31900,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I am willing to rent a bike",
+            "match": {
+              "location": "StepDefs.i_am_willing_to_rent_a_bike()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 17800,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "I am not willing to use public transport",
+            "match": {
+              "location": "StepDefs.i_am_not_willing_to_use_public_transport()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 153100,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "I am located in \"Piazzale Tecchio\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Piazzale Tecchio\"",
+                  "offset": 16
+                }
+              ],
+              "location": "StepDefs.i_am_located_in(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 110500,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "I want to go to \"Piazza Vittoria\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Piazza Vittoria\"",
+                  "offset": 16
+                }
+              ],
+              "location": "StepDefs.i_want_to_go_to(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1349000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I should be suggested to park at Piedigrotta Parking",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Piedigrotta Parking",
+                  "offset": 33
+                }
+              ],
+              "location": "StepDefs.i_should_be_suggested_to_park_at(ParkingSpot)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 108800,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "I should be suggested to rent a bike at \"Piedigrotta Bikes\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Piedigrotta Bikes\"",
+                  "offset": 40
+                }
+              ],
+              "location": "StepDefs.i_should_be_suggested_to_rent_a_bike_at(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 64600,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "I should be suggested to arrive with \"bike\" at destination",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"bike\"",
+                  "offset": 37
+                }
+              ],
+              "location": "StepDefs.i_should_be_suggested_to_arrive_with_at_destination(String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 2,
+        "name": "Available transports",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 138600,
+              "status": "passed"
+            },
+            "line": 3,
+            "name": "the following public transport routes available:",
+            "match": {
+              "location": "StepDefs.the_following_public_transport_routes_available(String\u003e\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Type",
+                  "Line Name",
+                  "Departure name",
+                  "Destination name"
+                ]
+              },
+              {
+                "cells": [
+                  "Bus",
+                  "140",
+                  "Piazza Sannazzaro",
+                  "Piazza Vittoria"
+                ]
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 55100,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the following bike rental stations:",
+            "match": {
+              "location": "StepDefs.the_following_bike_rental_stations(String\u003e\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Bike Rental Station Name",
+                  "Fee per hour"
+                ]
+              },
+              {
+                "cells": [
+                  "Piedigrotta Bikes",
+                  "2"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 48400,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "there are these parking spots:",
+            "match": {
+              "location": "StepDefs.there_are_these_parking_spots(String\u003e\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Parking Spot Name",
+                  "Fee per hour"
+                ]
+              },
+              {
+                "cells": [
+                  "Parcheggio Morelli",
+                  "2"
+                ]
+              },
+              {
+                "cells": [
+                  "Piedigrotta Parking",
+                  "5"
+                ]
+              }
+            ],
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 24,
+        "name": "Fastest Multimodal Itinerary with only public transport permitted",
+        "description": "",
+        "id": "find-the-best-multimodal-itinerary-while-travelling-on-a-car;fastest-multimodal-itinerary-with-only-public-transport-permitted",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 15400,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "I am travelling on car",
+            "match": {
+              "location": "StepDefs.i_am_travelling_on_car()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 25700,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "I am not willing to rent a bike",
+            "match": {
+              "location": "StepDefs.i_am_not_willing_to_rent_a_bike()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 17900,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "I am willing to use public transport",
+            "match": {
+              "location": "StepDefs.i_am_willing_to_use_public_transport()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 74200,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "I am located in \"Piazzale Tecchio\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Piazzale Tecchio\"",
+                  "offset": 16
+                }
+              ],
+              "location": "StepDefs.i_am_located_in(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 98100,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "I want to go to \"Piazza Vittoria\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Piazza Vittoria\"",
+                  "offset": 16
+                }
+              ],
+              "location": "StepDefs.i_want_to_go_to(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 29500,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "I should be suggested to park at Piedigrotta Parking",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Piedigrotta Parking",
+                  "offset": 33
+                }
+              ],
+              "location": "StepDefs.i_should_be_suggested_to_park_at(ParkingSpot)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 53600,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "I should be suggested to arrive with \"140\" at destination",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"140\"",
+                  "offset": 37
+                }
+              ],
+              "location": "StepDefs.i_should_be_suggested_to_arrive_with_at_destination(String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Find the best multimodal itinerary while travelling on a car",
+    "description": "",
+    "id": "find-the-best-multimodal-itinerary-while-travelling-on-a-car",
+    "keyword": "Feature",
+    "uri": "classpath:EmCio/Features/Multimodal.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 113800,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "there are these parking spots:",
+            "match": {
+              "location": "StepDefs.there_are_these_parking_spots(String\u003e\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Parking Spot Name",
+                  "Fee per hour"
+                ]
+              },
+              {
+                "cells": [
+                  "Centro Direzionale Parking",
+                  "6"
+                ]
+              },
+              {
+                "cells": [
+                  "Garage Garibaldi",
+                  "4"
+                ]
+              },
+              {
+                "cells": [
+                  "Parcheggio Brin",
+                  "10"
+                ]
+              },
+              {
+                "cells": [
+                  "Parcheggio Morelli",
+                  "2"
+                ]
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 68200,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I am located in \u0027Via Morghen\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027Via Morghen\u0027",
+                  "offset": 16
+                }
+              ],
+              "location": "StepDefs.i_am_located_in(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 14600,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I am travelling on car",
+            "match": {
+              "location": "StepDefs.i_am_travelling_on_car()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 12300,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I am not willing to use public transport",
+            "match": {
+              "location": "StepDefs.i_am_not_willing_to_use_public_transport()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 13700,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "I am not willing to rent a bike",
+            "match": {
+              "location": "StepDefs.i_am_not_willing_to_rent_a_bike()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 15,
+        "name": "Going with car from Via Morghen to Centro Direzionale",
+        "description": "",
+        "id": "find-the-best-parking-spot-near-destination;going-with-car-from-via-morghen-to-centro-direzionale",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 62900,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I want to go to \"Centro Direzionale Isola 1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Centro Direzionale Isola 1\"",
+                  "offset": 16
+                }
+              ],
+              "location": "StepDefs.i_want_to_go_to(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 208400,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "I should be suggested to park in order at:",
+            "match": {
+              "location": "StepDefs.i_should_be_suggested_to_park_in_order_at(ParkingSpot\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Centro Direzionale Parking"
+                ]
+              },
+              {
+                "cells": [
+                  "Garage Garibaldi"
+                ]
+              },
+              {
+                "cells": [
+                  "Parcheggio Brin"
+                ]
+              },
+              {
+                "cells": [
+                  "Parcheggio Morelli"
+                ]
+              }
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 123500,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "there are these parking spots:",
+            "match": {
+              "location": "StepDefs.there_are_these_parking_spots(String\u003e\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Parking Spot Name",
+                  "Fee per hour"
+                ]
+              },
+              {
+                "cells": [
+                  "Centro Direzionale Parking",
+                  "6"
+                ]
+              },
+              {
+                "cells": [
+                  "Garage Garibaldi",
+                  "4"
+                ]
+              },
+              {
+                "cells": [
+                  "Parcheggio Brin",
+                  "10"
+                ]
+              },
+              {
+                "cells": [
+                  "Parcheggio Morelli",
+                  "2"
+                ]
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 82100,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I am located in \u0027Via Morghen\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027Via Morghen\u0027",
+                  "offset": 16
+                }
+              ],
+              "location": "StepDefs.i_am_located_in(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 16800,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I am travelling on car",
+            "match": {
+              "location": "StepDefs.i_am_travelling_on_car()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 16100,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I am not willing to use public transport",
+            "match": {
+              "location": "StepDefs.i_am_not_willing_to_use_public_transport()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 20200,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "I am not willing to rent a bike",
+            "match": {
+              "location": "StepDefs.i_am_not_willing_to_rent_a_bike()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 29,
+        "name": "Best parking from Via Morghen to Centro Direzionale for cost and  travel time",
+        "description": "",
+        "id": "find-the-best-parking-spot-near-destination;best-parking-from-via-morghen-to-centro-direzionale-for-cost-and--travel-time;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 24500,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "I want the cheapest itinerary",
+            "match": {
+              "location": "StepDefs.i_want_the_cheapest_itinerary()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 58500,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "I want to go to \"Piazza Garibaldi\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Piazza Garibaldi\"",
+                  "offset": 16
+                }
+              ],
+              "location": "StepDefs.i_want_to_go_to(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 24000,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "My first parking spot returned should be Parcheggio Morelli",
+            "match": {
+              "location": "StepDefs.my_first_parking_spot_returned_should_be_Parcheggio_Morelli()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 141900,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "there are these parking spots:",
+            "match": {
+              "location": "StepDefs.there_are_these_parking_spots(String\u003e\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Parking Spot Name",
+                  "Fee per hour"
+                ]
+              },
+              {
+                "cells": [
+                  "Centro Direzionale Parking",
+                  "6"
+                ]
+              },
+              {
+                "cells": [
+                  "Garage Garibaldi",
+                  "4"
+                ]
+              },
+              {
+                "cells": [
+                  "Parcheggio Brin",
+                  "10"
+                ]
+              },
+              {
+                "cells": [
+                  "Parcheggio Morelli",
+                  "2"
+                ]
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 70800,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I am located in \u0027Via Morghen\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027Via Morghen\u0027",
+                  "offset": 16
+                }
+              ],
+              "location": "StepDefs.i_am_located_in(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 14100,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I am travelling on car",
+            "match": {
+              "location": "StepDefs.i_am_travelling_on_car()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 11900,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I am not willing to use public transport",
+            "match": {
+              "location": "StepDefs.i_am_not_willing_to_use_public_transport()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 11400,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "I am not willing to rent a bike",
+            "match": {
+              "location": "StepDefs.i_am_not_willing_to_rent_a_bike()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 30,
+        "name": "Best parking from Via Morghen to Centro Direzionale for cost and  travel time",
+        "description": "",
+        "id": "find-the-best-parking-spot-near-destination;best-parking-from-via-morghen-to-centro-direzionale-for-cost-and--travel-time;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 20300,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "I want the fastest itinerary",
+            "match": {
+              "location": "StepDefs.i_want_the_fastest_itinerary()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 51900,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "I want to go to \"Piazza Garibaldi\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Piazza Garibaldi\"",
+                  "offset": 16
+                }
+              ],
+              "location": "StepDefs.i_want_to_go_to(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 22800,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "My first parking spot returned should be Garage Garibaldi",
+            "match": {
+              "location": "StepDefs.my_first_parking_spot_returned_should_be_Garage_Garibaldi()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Find the best parking spot near destination",
+    "description": "",
+    "id": "find-the-best-parking-spot-near-destination",
+    "keyword": "Feature",
+    "uri": "classpath:EmCio/Features/Parking.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 2,
+        "name": "Going from Piazza Cavour to Via Claudio with public transport",
+        "description": "",
+        "id": "find-the-fastest-public-transport-itinerary-to-destination;going-from-piazza-cavour-to-via-claudio-with-public-transport",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 145800,
+              "status": "passed"
+            },
+            "line": 3,
+            "name": "the following public transport routes available:",
+            "match": {
+              "location": "StepDefs.the_following_public_transport_routes_available(String\u003e\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Type",
+                  "Line Name",
+                  "Departure name",
+                  "Destination name"
+                ]
+              },
+              {
+                "cells": [
+                  "Metro",
+                  "Linea 2",
+                  "Piazza Cavour",
+                  "Campi Flegrei"
+                ]
+              },
+              {
+                "cells": [
+                  "Bus",
+                  "123",
+                  "Cavour",
+                  "Tecchio"
+                ]
+              },
+              {
+                "cells": [
+                  "Metro",
+                  "Linea 1",
+                  "Museo",
+                  "Dante"
+                ]
+              },
+              {
+                "cells": [
+                  "Bus",
+                  "456",
+                  "Piazza Dante",
+                  "Piazzale Tecchio"
+                ]
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 92300,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I am located in \"Piazza Cavour\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Piazza Cavour\"",
+                  "offset": 16
+                }
+              ],
+              "location": "StepDefs.i_am_located_in(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 17000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I am willing to use public transport",
+            "match": {
+              "location": "StepDefs.i_am_willing_to_use_public_transport()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 25800,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I am not travelling on car",
+            "match": {
+              "location": "StepDefs.i_am_not_travelling_on_car()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 57900,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I want to go to \"Via Claudio\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Via Claudio\"",
+                  "offset": 16
+                }
+              ],
+              "location": "StepDefs.i_want_to_go_to(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 109200,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "I should be suggested these itineraries:",
+            "match": {
+              "location": "StepDefs.i_should_be_suggested_these_itineraries(String\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Linea 2"
+                ]
+              },
+              {
+                "cells": [
+                  "123"
+                ]
+              },
+              {
+                "cells": [
+                  "Linea 1, 456"
+                ]
+              }
+            ],
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Find the fastest public transport itinerary to destination",
+    "description": "",
+    "id": "find-the-fastest-public-transport-itinerary-to-destination",
+    "keyword": "Feature",
+    "uri": "classpath:EmCio/Features/PublicTransport.feature",
+    "tags": []
+  }
+]

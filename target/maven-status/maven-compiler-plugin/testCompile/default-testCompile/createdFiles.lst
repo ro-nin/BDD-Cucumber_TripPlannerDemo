@@ -1,0 +1,5 @@
+EmCio\Model\ParkingSpot.class
+EmCio\RunCucumberTest.class
+EmCio\TypeRegistryConfiguration.class
+EmCio\StepDefs.class
+EmCio\ItineraryPreference.class
